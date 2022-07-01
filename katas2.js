@@ -1,11 +1,6 @@
 // comece a criar a sua função add na linha abaixo
 function add(numeroUm, numeroDois) {
-    let resultado = 0
-    let loop = numeroUm + numeroDois
-    for (let i = 0; i < loop; i++) {
-        resultado++
-    }
-    return resultado
+    return numeroUm + numeroDois
 }
 // descomente a linha seguinte para testar sua função
 // console.assert(add(3, 5) === 8, 'A função add não está funcionando como esperado');
@@ -40,10 +35,9 @@ function power(x, n) {
 // comece a criar a sua função factorial na linha abaixo
 function factorial(numero) {
     let arrayNumero = []
-    for (let i = 0; i < numero; i++) {
-        arrayNumero.push(i + 1)
+    for (let i = numero; i > 0; i--) {
+        arrayNumero.push(i)
     }
-    arrayNumero.reverse()
     let resultado = numero
     for (let i = 1; i < arrayNumero.length; i++) {
         resultado = multiply(resultado, arrayNumero[i])
@@ -67,6 +61,7 @@ function fibonacci(n) {
         let resultadoAtual = add(arrayResultado[i], arrayResultado[i-1])
         arrayResultado.push(resultadoAtual)
         resultado = resultadoAtual
+        console.log(arrayResultado)
     }
     return resultado
 }
